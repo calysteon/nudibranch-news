@@ -52,10 +52,9 @@ a:hover {
 }
 
 .logo {
-  width: 132px;
+  width: 150px;
   height: auto;
   flex: 0 0 auto;
-  transform: scaleX(-1);
 }
 
 .masthead-text {
