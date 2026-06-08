@@ -13,7 +13,8 @@ Logo mascot: the **Leopard Dorid**.
 ├── articles/
 │   └── striped-nudibranch-golden-gardens.html  # First article
 ├── images/                                     # Logo + photos (see images/README.md)
-└── .nojekyll                                   # Serve plain HTML on GitHub Pages
+├── .nojekyll                                   # Serve plain HTML on GitHub Pages
+└── .github/workflows/deploy.yml                # Deploys the site to GitHub Pages
 ```
 
 ## Adding the images
@@ -23,11 +24,15 @@ exact filenames to add.
 
 ## Publishing on GitHub Pages
 
-1. Push this branch and merge it into your default branch (e.g. `main`).
+This repository deploys automatically with GitHub Actions
+(see [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)).
+
+1. Push this branch and merge it into your default branch (`main`).
 2. In the repository, go to **Settings → Pages**.
-3. Under **Build and deployment**, set **Source** to *Deploy from a branch*, pick your
-   default branch and the `/ (root)` folder, and save.
-4. Your site will be published at `https://<user>.github.io/nudibranch-news/`.
+3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+4. Every push to `main` then builds and deploys the site automatically (you can also
+   trigger it manually from the **Actions** tab). It will be published at
+   `https://calysteon.github.io/nudibranch-news/`.
 
 ## Adding a new article
 
